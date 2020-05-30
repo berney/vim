@@ -404,7 +404,7 @@ CClink = $(CC)
 # Use --with-luajit if you want to use LuaJIT instead of Lua.
 # Set PATH environment variable to find lua or luajit executable.
 # This requires at least "normal" features, "tiny" and "small" don't work.
-#CONF_OPT_LUA = --enable-luainterp
+CONF_OPT_LUA = --enable-luainterp
 #CONF_OPT_LUA = --enable-luainterp=dynamic
 #CONF_OPT_LUA = --enable-luainterp --with-luajit
 #CONF_OPT_LUA = --enable-luainterp=dynamic --with-luajit
@@ -447,7 +447,7 @@ CClink = $(CC)
 # dlopen(), dlsym(), dlclose(), i.e. pythonX.Y.so must be available
 # However, this may still cause problems, such as "import termios" failing.
 # Build two separate versions of Vim in that case.
-#CONF_OPT_PYTHON = --enable-pythoninterp
+CONF_OPT_PYTHON = --enable-pythoninterp
 #CONF_OPT_PYTHON = --enable-pythoninterp --with-python-command=python2.7
 #CONF_OPT_PYTHON = --enable-pythoninterp=dynamic
 #CONF_OPT_PYTHON3 = --enable-python3interp
@@ -460,7 +460,7 @@ CClink = $(CC)
 # Note: you need the development package (e.g., ruby1.9.1-dev on Ubuntu).
 # This requires at least "normal" features, "tiny" and "small" don't work.
 #CONF_OPT_RUBY = --enable-rubyinterp
-#CONF_OPT_RUBY = --enable-rubyinterp=dynamic
+CONF_OPT_RUBY = --enable-rubyinterp=dynamic
 #CONF_OPT_RUBY = --enable-rubyinterp --with-ruby-command=ruby1.9.1
 
 # TCL
@@ -1010,6 +1010,7 @@ TOOLS = xxd/xxd$(EXEEXT)
 #
 # Uncomment the next line to install Vim in your home directory.
 #prefix = $(HOME)
+prefix = /usr
 
 ### exec_prefix	is the top directory for the executable (default $(prefix))
 #
